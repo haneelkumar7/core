@@ -1,0 +1,31 @@
+Process vs thread
+Process and thread are fundamental concepts in computer science, especially when it comes to understanding how modern operating systems manage tasks and execute programs. They represent different levels of concurrency and isolation in a system. Let's delve into their definitions and differences:
+
+1. Process:
+A process can be thought of as an independent instance of a running program in a computer system. It is a self-contained unit with its own memory space, file handles, and system resources. Each process operates independently of other processes, ensuring that one process's failure does not affect the others. Multiple processes can run simultaneously, enabling true multitasking and parallelism on multi-core systems.
+
+Key characteristics of a process:
+- Independent execution: Processes operate in their isolated memory space, and communication between processes typically requires inter-process communication (IPC) mechanisms.
+- Resource allocation: Each process gets its own allocated system resources, such as CPU time, memory, and files.
+- Overhead: Processes have more overhead since they need separate memory space and system resources.
+- Robustness: A failure in one process does not directly impact other processes.
+
+2. Thread:
+A thread, on the other hand, is a basic unit of execution within a process. Each process can have one or more threads, and all threads within a process share the same memory space, file descriptors, and other resources of that process. Threads are lighter weight compared to processes since they don't need a separate memory space.
+
+Key characteristics of a thread:
+- Shared resources: Threads within the same process share the same memory space, allowing for more straightforward communication and data sharing.
+- Lightweight: Threads have lower overhead compared to processes since they share the same memory space and resources.
+- Concurrency: Threads within a single process can execute concurrently, enabling parallelism within the process.
+- Impact on process: If one thread encounters an issue like a segmentation fault, it can potentially crash the entire process and all its threads.
+
+Differences between processes and threads:
+1. Isolation: Processes are independent and isolated from each other, whereas threads share the same memory space and resources within a process.
+
+2. Communication: Processes need explicit inter-process communication mechanisms (e.g., pipes, sockets, message queues) to exchange data, while threads can communicate more directly through shared memory.
+
+3. Resource overhead: Processes have higher overhead due to separate memory space, whereas threads have lower overhead as they share resources.
+
+4. Robustness: A failure in one thread can potentially crash the entire process, affecting all its threads. In contrast, a failure in one process does not directly impact other processes.
+
+In summary, processes and threads are both essential for achieving concurrency and parallelism in modern computing. Processes offer strong isolation and fault tolerance but come with higher overhead, while threads provide efficient communication and lower overhead but with reduced isolation and greater risk of shared resource conflicts. The choice between processes and threads depends on the specific requirements of the application and the level of isolation and concurrency needed.

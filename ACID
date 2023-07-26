@@ -1,0 +1,13 @@
+ACID is an acronym that stands for Atomicity, Consistency, Isolation, and Durability. These properties are essential characteristics that guarantee the reliability and integrity of transactions in a database management system (DBMS). The ACID properties ensure that database transactions are processed in a way that preserves data consistency and prevents data corruption or loss. Let's take a closer look at each of the ACID properties:
+
+1. *Atomicity*: Atomicity ensures that a transaction is treated as a single, indivisible unit of work. It means that either all the operations within a transaction are successfully completed, or none of them are. If any part of the transaction fails, the entire transaction is rolled back, and the database state is restored to the point before the transaction started. This prevents incomplete or partial transactions from affecting the consistency of the data.
+
+2. *Consistency*: Consistency ensures that a transaction takes the database from one valid state to another. The database must follow a set of predefined rules or constraints, known as integrity constraints. If a transaction violates any of these constraints, the entire transaction is rolled back, and the database remains unchanged. Consistency ensures that data is always in a valid and meaningful state.
+
+3. *Isolation*: Isolation ensures that concurrent transactions do not interfere with each other. Each transaction is isolated from other transactions, meaning that the operations of one transaction are not visible to other transactions until the first transaction is committed. This prevents data inconsistency caused by concurrent access to the same data.
+
+4. *Durability*: Durability ensures that once a transaction is committed, its changes are permanent and will survive any subsequent failures, such as system crashes or power outages. The committed data is stored in non-volatile memory (usually on disk) and can be retrieved even if the system crashes right after the transaction is completed.
+
+The ACID properties play a crucial role in maintaining data integrity and reliability in database systems, especially in transactional databases where multiple users or applications might simultaneously access and modify the data. These properties ensure that the database remains in a consistent state, regardless of any concurrent operations or system failures.
+
+It's important to note that while ACID properties are critical for transactional databases, there are also other types of databases, like NoSQL databases, that might prioritize other aspects like scalability and flexibility over strict ACID guarantees. In such cases, databases might opt for different consistency models, like eventual consistency, to achieve specific performance goals.

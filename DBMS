@@ -1,0 +1,17 @@
+Database languages are specialized programming languages designed for interacting with databases. They allow users to define, manipulate, and retrieve data from the database. There are several types of database languages, each serving a specific purpose. Here are some of the main types:
+
+1. Data Definition Language (DDL): DDL is used for defining and managing the structure of the database. It includes commands for creating, altering, and deleting database objects like tables, indexes, views, and schemas. Examples of DDL commands include CREATE, ALTER, and DROP.
+
+2. Data Manipulation Language (DML): DML is used to manipulate data stored within the database. It allows users to insert, update, delete, and retrieve data from tables. Common DML commands include SELECT, INSERT, UPDATE, and DELETE.
+
+3. Data Query Language (DQL): DQL is a subset of DML and is specifically used for retrieving data from the database. The primary command in DQL is SELECT, which allows users to specify which data they want to retrieve based on certain criteria.
+
+4. Data Control Language (DCL): DCL is responsible for managing access and permissions to the database objects. It includes commands for granting or revoking privileges to users and roles. Examples of DCL commands are GRANT and REVOKE.
+
+5. Transaction Control Language (TCL): TCL is used for managing transactions within the database. Transactions are sets of operations that are executed as a single unit, ensuring data integrity and consistency. Common TCL commands include COMMIT, ROLLBACK, and SAVEPOINT.
+
+6. Procedural Language: Some database systems offer procedural language extensions, which allow users to create stored procedures, functions, and triggers. These languages enable the execution of complex logic and calculations within the database itself.
+
+Examples of procedural languages in databases include PL/SQL for Oracle, T-SQL for Microsoft SQL Server, and PL/pgSQL for PostgreSQL.
+
+It's important to note that the specific commands and syntax may vary between different database management systems (DBMS) like MySQL, PostgreSQL, Oracle, Microsoft SQL Server, and others. However, the fundamental concepts of DDL, DML, DQL, DCL, and TCL remain consistent across most systems.
